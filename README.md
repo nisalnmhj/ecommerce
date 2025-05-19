@@ -9,7 +9,7 @@ This is a simple e-commerce frontend built using **React** and **React Router**.
 ---
 
 ## 📁 Project Structure
-
+```
 src/
 │
 ├── components/ # Reusable UI components
@@ -35,7 +35,7 @@ src/
 ├── index.js # React entry point
 ├── index.css 
 └── logo.svg 
-
+```
 ## ✨ Features Implemented
 
 - ✅ Product listing with image, name, and price
