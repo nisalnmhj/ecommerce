@@ -12,7 +12,7 @@ This is a simple e-commerce frontend built using **React** and **React Router**.
 ---
 
 ## 📁 Project Structure
-
+```
 src/
 │
 ├── components/ # Reusable UI components
