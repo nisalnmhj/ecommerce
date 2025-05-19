@@ -1,9 +1,10 @@
-import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { useCart } from '../context/CartContext.js';
+import { useFavorites } from '../context/FavoriteContext.js';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const { cartItems } = useCart();
+  const { favorites } = useFavorites();
   const totalItems  = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
@@ -13,6 +14,15 @@ export default function Navbar() {
           <Link to="/" className="text-white font-bold text-xl hover:text-gray-300">
             DigitalNest Shop
           </Link>
+
+          <Link to="/favorites" className="relative text-white hover:text-gray-300">
+              ❤️ Favorites
+              {favorites.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-pink-500 text-xs px-2 py-0.5 rounded-full">
+                  {favorites.length}
+                </span>
+              )}
+            </Link>
 
          <Link to="/cart" className="relative text-white hover:text-gray-300">
             🛒 Cart

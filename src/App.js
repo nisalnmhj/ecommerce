@@ -1,6 +1,7 @@
 import Home from './pages/Home.js';
 import CartPage from './pages/CartPage.js'; 
 import ProductDetailPage from './pages/ProductDetailPage.js';
+import FavoritesPage from './pages/FavoritesPage.js';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 
@@ -12,6 +13,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/product/:id" element={<ProductDetailPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/favorites" element={<FavoritesPage />} />
+
     </Routes>
   
   );
