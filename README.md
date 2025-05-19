@@ -1,3 +1,4 @@
+
 ![Demo](./GIF/GIF.gif)
 
 # 🛍️ React E-Commerce Mini App
@@ -38,7 +39,7 @@ src/
 ├── index.js # React entry point
 ├── index.css 
 └── logo.svg 
-
+```
 ## 📌 My Approach
 
 ### 🌙 Dark Mode Support with Tailwind CSS
