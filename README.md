@@ -1,5 +1,5 @@
 
-![Demo](../ecommerce/src/GIF/GIF.gif)
+![Demo](./src/GIF/GIF.gif)
 
 # 🛍️ React E-Commerce Mini App
 
