@@ -1,11 +1,14 @@
 import { useCart } from '../context/CartContext.js';
 import { useFavorites } from '../context/FavoriteContext.js';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 
 export default function Navbar() {
   const { cartItems } = useCart();
   const { favorites } = useFavorites();
-  const totalItems  = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  const { darkMode, toggleDarkMode } = useTheme();
+  const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <nav className="bg-gray-800">
@@ -15,20 +18,35 @@ export default function Navbar() {
             DigitalNest Shop
           </Link>
 
-          <Link to="/favorites" className="relative text-white hover:text-gray-300">
-              ❤️ Favorites
-              {favorites.length > 0 && (
-                <span className="absolute -top-2 -right-2 bg-pink-500 text-xs px-2 py-0.5 rounded-full">
-                  {favorites.length}
-                </span>
-              )}
-            </Link>
+          {/* 🌙 Dark Mode Toggle */}
+          <button
+            onClick={toggleDarkMode}
+            className="text-white hover:scale-110 transition"
+            title="Toggle Dark Mode"
+          >
+            {darkMode ? (
+              <SunIcon className="h-6 w-6 text-yellow-400" />
+            ) : (
+              <MoonIcon className="h-6 w-6 text-white" />
+            )}
+          </button>
 
-         <Link to="/cart" className="relative text-white hover:text-gray-300">
+          <Link to="/favorites" className="relative text-white hover:text-gray-300 ml-4">
+            ❤️ Favorites
+            {favorites.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-pink-500 text-xs px-2 py-0.5 rounded-full">
+                {favorites.length}
+              </span>
+            )}
+          </Link>
+
+          <Link to="/cart" className="relative text-white hover:text-gray-300 ml-4">
             🛒 Cart
-            <span className="absolute -top-2 -right-2 bg-red-500 text-xs px-2 py-0.5 rounded-full">
-              {totalItems}
-            </span>
+            {totalItems > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-xs px-2 py-0.5 rounded-full">
+                {totalItems}
+              </span>
+            )}
           </Link>
         </div>
       </div>

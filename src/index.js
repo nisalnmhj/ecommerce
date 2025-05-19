@@ -5,11 +5,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CartProvider } from '../src/context/CartContext.js';
-import {FavoritesProvider} from '../src/context/FavoriteContext.js'
+import {FavoritesProvider} from '../src/context/FavoriteContext.js';
+import { ThemeProvider } from './context/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ThemeProvider>
     <FavoritesProvider>
     <CartProvider>
       <BrowserRouter>
@@ -17,6 +19,7 @@ root.render(
       </BrowserRouter>
     </CartProvider>
     </FavoritesProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

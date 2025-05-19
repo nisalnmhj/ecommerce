@@ -21,14 +21,14 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className="border rounded-lg p-4 shadow hover:shadow-md transition relative">
+    <div className="border rounded-lg p-4 shadow hover:shadow-md transition relative bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
       <img
         src={product.image}
         alt={product.name}
         className="w-full h-48 object-cover mb-4"
       />
       <h2 className="text-lg font-semibold">{product.name}</h2>
-      <p className="text-gray-700">${product.price}</p>
+      <p className="text-lg font-semibold">${product.price}</p>
 
       <div className="mt-2 flex items-center justify-between">
         <Link

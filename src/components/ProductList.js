@@ -23,13 +23,11 @@ export default function ProductList() {
 
   const categories = ["All Categories", "Apparel", "Accessories", "Electronics"];
 
-  // Add category to each product
   const productsWithCategory = products.map((product) => ({
     ...product,
     category: categoryMap[product.name] || "Uncategorized",
   }));
 
-  // Filter based on selected category
   const filteredProducts =
     selectedCategory === "All Categories"
       ? productsWithCategory
@@ -38,15 +36,15 @@ export default function ProductList() {
         );
 
   return (
-    <div className="p-4 bg-white">
+    <div className="p-4 bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
       <div className="mb-4">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Our Products</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Our Products</h2>
         <label htmlFor="category-filter" className="mr-2 font-semibold">Filter by Category:</label>
         <select
           id="category-filter"
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="border px-2 py-1 rounded"
+          className="border px-2 py-1 rounded bg-white dark:bg-gray-800 dark:text-white dark:border-gray-700"
         >
           {categories.map((cat) => (
             <option key={cat} value={cat}>{cat}</option>

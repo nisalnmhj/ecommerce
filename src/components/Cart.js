@@ -18,7 +18,7 @@ export default function Cart() {
   };
 
   if (cartItems.length === 0) return (
-    <div className="flex items-center justify-center h-screen p-4 bg-gray-50">
+    <div className="flex items-center justify-center h-screen   bg-white dark:bg-gray-900 text-black dark:text-white p-4">
       <div className="text-center">
         <p className="text-xl font-semibold text-gray-700 mb-2">Your cart is empty.</p>
         <p className="text-gray-500">Add some products to your cart to see them here.</p>
@@ -27,7 +27,7 @@ export default function Cart() {
   );
 
   return (
-    <div className="p-4">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white p-4">
       <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
       {cartItems.map((item) => (
         <div key={item.id} className="flex items-center justify-between mb-4 border-b pb-2">
