@@ -89,3 +89,9 @@ React Router enables smooth, client-side routing for pages like Home, Product De
 - **Context API + useReducer**
 - **Tailwind CSS** (used for styling)
 - **Heroicons** for icons
+
+## Problem Faced & Solutions
+1. "No routes matched location '/ecommerce/'" error
+Problem: After deployment, I got a blank page with this error because React Router couldn’t match the route.
+Solution: I fixed this by setting a basename in BrowserRouter
+
