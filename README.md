@@ -74,17 +74,13 @@ React Router enables smooth, client-side routing for pages like Home, Product De
 - ✅ Total price calculation of the products in the Cart
 - ✅ Dark and Light Mode
 
-### ❤️ Favorites Improvements
+### ❤️ Future Improvements
 - Persist favorites using `localStorage`
 - Sync favorites with backend (user-based)
 - Pagination or infinite scroll
-
-### 💅 UI/UX Enhancements
-- Add loading spinners or skeletons
-
-### 🔐 Authentication
-- Add login/signup pages
-- Store user-specific cart/favorites in backend
+- Add loading spinners or skeletons (UI/UX Enhancements)
+- Add login/signup pages ( Authentication)
+- Store user-specific cart/favorites in backend ( Authentication)
 
 ## 🛠️ Tech Stack
 
