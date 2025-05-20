@@ -14,7 +14,7 @@ root.render(
     <ThemeProvider>
     <FavoritesProvider>
     <CartProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='/ecommerce'>
       <App />
       </BrowserRouter>
     </CartProvider>
