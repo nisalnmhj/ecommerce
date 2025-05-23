@@ -11,8 +11,7 @@ export default function ProductCard({ product }) {
 
   const toggleFavorite = () => {
     setAnimate(true);
-    setTimeout(() => setAnimate(false), 300); // Reset animation
-
+    setTimeout(() => setAnimate(false), 300); 
     if (isFavorite) {
       dispatch({ type: "REMOVE_FAVORITE", payload: product.id });
     } else {

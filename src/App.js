@@ -3,7 +3,7 @@ import CartPage from './pages/CartPage.js';
 import ProductDetailPage from './pages/ProductDetailPage.js';
 import FavoritesPage from './pages/FavoritesPage.js';
 import './App.css';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 console.log({ Home, CartPage, ProductDetailPage });
 function App() {
